@@ -7,22 +7,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMS Deeplink</title>
   <style>
-    li {
-      padding: 0.5em 0;
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 10px;
     }
   </style>
 </head>
 
 <body>
-  <h1>SMS Deeplink POC</h1>
+  <h1>SMS Deeplinks</h1>
+  <p>This is how to format deeplink URLs for iOS and Android.</p>
   <ul>
-    <li>
-      <a href="sms:1-415-843-1652&body=Hello World">iOS - Deeplink</a>
-    </li>
-    <li>
-      <a href="sms:1-415-843-1652?body=Hello World">Android - Deeplink</a>
-    </li>
+    <li>Start the url with <code>sms:{PHONE}</code></li>
+    <li>Enter <code>&body</code> param for iOS followed by body text</li>
+    <li>Enter <code>?body</code> param for Android followed by body text</li>
   </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Device</th>
+        <th>URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="sms:1-415-843-1652&body=Hello World">iOS - Deeplink</a></td>
+        <td><code>sms:1-415-843-1652&body=Hello World</code></td>
+      </tr>
+      <tr>
+        <td><a href="sms:1-415-843-1652&body=Hello World">Android - Deeplink</a></td>
+        <td><code>sms:1-415-843-1652?body=Hello World</code></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 </html>
